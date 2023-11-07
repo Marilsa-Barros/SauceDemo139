@@ -99,7 +99,7 @@ namespace SauceDemo139.Features
         testRunner.When("preencho o usuário com \"standard_user\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 7
-        testRunner.And("a senha \"sauce_secret\" e clico no botao Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+        testRunner.And("a senha \"secret_sauce\" e clico no botao Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 8
         testRunner.Then("exibe \"Products\" no titulo da secao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
@@ -118,6 +118,62 @@ namespace SauceDemo139.Features
 #line hidden
 #line 13
         testRunner.And("o preco com \"$29.99\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Selecao de Produto com Sucesso DDT")]
+        [NUnit.Framework.TestCaseAttribute("\"standard_user\"", "\"secret_sauce\"", "\"Products\"", "\"Sauce Labs Backpack\"", "\"1\"", "\"$29.99\"", null)]
+        [NUnit.Framework.TestCaseAttribute("\"visual_user\"", "\"secret_sauce\"", "\"Products\"", "\"Sauce Labs Bike Light\"", "\"1\"", "\"$9.99\"", null)]
+        public void SelecaoDeProdutoComSucessoDDT(string usuario, string senha, string tituloSecao, string produto, string quantidade, string preco, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("usuario", usuario);
+            argumentsOfScenario.Add("senha", senha);
+            argumentsOfScenario.Add("tituloSecao", tituloSecao);
+            argumentsOfScenario.Add("produto", produto);
+            argumentsOfScenario.Add("quantidade", quantidade);
+            argumentsOfScenario.Add("preco", preco);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Selecao de Produto com Sucesso DDT", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 15
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 16
+        testRunner.Given("que acesso a página inicial do site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 17
+        testRunner.When(string.Format("preencho o {0}", usuario), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 18
+        testRunner.And(string.Format("a senha {0} e clico no botao Login", senha), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 19
+        testRunner.Then(string.Format("exibe {0} no titulo da secao", tituloSecao), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+#line hidden
+#line 20
+        testRunner.When(string.Format("adiciono o produto {0} ao carrinho", produto), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line hidden
+#line 21
+        testRunner.And("clico no carrinho de compras", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 22
+        testRunner.Then(string.Format("exibe a pagina do carrinho com a quantidade {0}", quantidade), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+#line hidden
+#line 23
+        testRunner.And(string.Format("nome do produto {0}", produto), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 24
+        testRunner.And(string.Format("o preco com {0}", preco), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
