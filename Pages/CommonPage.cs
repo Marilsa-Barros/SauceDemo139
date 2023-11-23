@@ -18,5 +18,18 @@ namespace Pages
         {
             this.driver = driver;
         }
-    }
+
+
+        // Ações
+        public String LerTituloDaSecao()
+        {
+            return lblTituloSecao.Text;
+        }
+        public void IrParaOCarrinho()
+        {
+            icoCarrinho.Click();
+        }
+        
+    }        
+
 }

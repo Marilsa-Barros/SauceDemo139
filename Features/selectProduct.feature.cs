@@ -21,14 +21,12 @@ namespace SauceDemo139.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Selecionar Produto na Loja")]
-    [NUnit.Framework.CategoryAttribute("Loja")]
     public partial class SelecionarProdutoNaLojaFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = new string[] {
-                "Loja"};
+        private static string[] featureTags = ((string[])(null));
         
 #line 1 "selectProduct.feature"
 #line hidden
@@ -77,9 +75,11 @@ namespace SauceDemo139.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Selecao de Produto com Sucesso")]
+        [NUnit.Framework.CategoryAttribute("Loja")]
         public void SelecaoDeProdutoComSucesso()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Loja"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Selecao de Produto com Sucesso", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
@@ -96,7 +96,7 @@ namespace SauceDemo139.Features
         testRunner.Given("que acesso a página inicial do site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 6
-        testRunner.When("preencho o usuário com \"standard_user\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+        testRunner.When("preencho o usuário como \"standard_user\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 7
         testRunner.And("a senha \"secret_sauce\" e clico no botao Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
@@ -108,7 +108,7 @@ namespace SauceDemo139.Features
         testRunner.When("adiciono o produto \"Sauce Labs Backpack\" ao carrinho", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 10
-        testRunner.And("clico no carrinho de compras", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+        testRunner.And("clico no icone do carrinho de compras", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 11
         testRunner.Then("exibe a pagina do carrinho com a quantidade \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
@@ -117,7 +117,7 @@ namespace SauceDemo139.Features
         testRunner.And("nome do produto \"Sauce Labs Backpack\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 13
-        testRunner.And("o preco com \"$29.99\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+        testRunner.And("o preco como \"$29.99\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -164,7 +164,7 @@ namespace SauceDemo139.Features
         testRunner.When(string.Format("adiciono o produto {0} ao carrinho", produto), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 21
-        testRunner.And("clico no carrinho de compras", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+        testRunner.And("clico no icone do carrinho de compras", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 22
         testRunner.Then(string.Format("exibe a pagina do carrinho com a quantidade {0}", quantidade), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
@@ -173,7 +173,7 @@ namespace SauceDemo139.Features
         testRunner.And(string.Format("nome do produto {0}", produto), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 24
-        testRunner.And(string.Format("o preco com {0}", preco), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+        testRunner.And(string.Format("o preco como {0}", preco), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();
